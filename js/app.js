@@ -2,6 +2,12 @@
 
 function getInput(num) {
   document.getElementById("floatingInput").value += String(num);
+  let len = document.getElementById("floatingInput").value.length;
+  
+  if(len >= 27)
+  {
+    document.getElementById("floatingInput").style.fontSize="1.5rem";
+  }
 }
 
 // For clearing whole expression from screen
