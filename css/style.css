@@ -30,7 +30,7 @@ body {
   justify-content: center;
   position: absolute;
   top: 125px;
-  left: 128px;
+  left: 104px;
   width: 482px;
 }
 
@@ -43,7 +43,7 @@ body {
 .digitContainer {
   position: absolute;
   top: 205px;
-  left: 127px;
+  left: 104px;
   width: 477px;
 }
 
@@ -67,7 +67,7 @@ body {
   z-index: 2;
   position: absolute;
   top: 481px;
-  left: 128px;
+  left: 104px;
   width: 481px;
   height: 62px;
 }
