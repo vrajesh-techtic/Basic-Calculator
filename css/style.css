@@ -1,0 +1,99 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#two-containers {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Calculator Image  */
+
+#calcImage {
+  display: flex;
+  justify-content: center;
+  margin: 40px 5px;
+}
+
+/* Calculator Items  */
+
+.calcInput {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 125px;
+  left: 128px;
+  width: 482px;
+}
+
+#floatingInput {
+  height: 67px;
+  text-align: end;
+  font-size: 2rem;
+}
+
+.digitContainer {
+  position: absolute;
+  top: 205px;
+  left: 127px;
+  width: 477px;
+}
+
+.digits {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 2px;
+  border: solid 2px;
+  border-radius: 8px;
+  height: 64px;
+  background-color: beige;
+}
+
+.digits:hover {
+  cursor: pointer;
+}
+
+#resultButton {
+  z-index: 2;
+  position: absolute;
+  top: 481px;
+  left: 128px;
+  width: 481px;
+  height: 62px;
+}
+
+.history-container {
+  margin: 40px 5px;
+}
+
+.history-table {
+  margin: 40px 0px;
+}
+
+#historyBtn {
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  height: fit-content;
+}
+
+td,
+th {
+  padding: 0;
+  text-align: center;
+  border: solid 2px black;
+}
+
+th {
+  font-size: 1.3rem;
+}
