@@ -30,16 +30,13 @@ body {
   justify-content: center;
   position: absolute;
   top: 125px;
-<<<<<<< HEAD
+
   left: 104px;
-=======
-  left: 105px;
->>>>>>> 3c9c273a9f404b00f82d954d3246add967139af0
+
   width: 482px;
 }
 
 #floatingInput {
-  
   height: 67px;
   text-align: end;
   font-size: 2rem;
@@ -48,11 +45,9 @@ body {
 .digitContainer {
   position: absolute;
   top: 205px;
-<<<<<<< HEAD
+
   left: 104px;
-=======
-  left: 105px;
->>>>>>> 3c9c273a9f404b00f82d954d3246add967139af0
+
   width: 477px;
 }
 
@@ -76,11 +71,9 @@ body {
   z-index: 2;
   position: absolute;
   top: 481px;
-<<<<<<< HEAD
+
   left: 104px;
-=======
-  left: 105px;
->>>>>>> 3c9c273a9f404b00f82d954d3246add967139af0
+
   width: 481px;
   height: 62px;
 }
