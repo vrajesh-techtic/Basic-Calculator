@@ -1,16 +1,37 @@
 // For getting input from buttons
 
+window.onkeydown = function (e) {
+  let val = e.which;
+  if ((val >= 96 && val <= 111) || (val >= 48 && val <= 57)) {
+    getInput(e.key);
+  }
+  if (val == 13) {
+    if (document.getElementById("floatingInput").value == "")
+      document.getElementById("floatingInput").value = "";
+    else calculate();
+  }
+
+  if (val == 46) clearInput();
+
+  if (val == 8) backClear();
+};
+
 function getInput(num) {
   document.getElementById("floatingInput").value += String(num);
   let len = document.getElementById("floatingInput").value.length;
-  
-  if(len >= 27)
-  {
-    document.getElementById("floatingInput").style.fontSize="1.5rem";
+
+  if (len >= 27) {
+    document.getElementById("floatingInput").style.fontSize = "1.5rem";
   }
 }
 
 // For clearing whole expression from screen
+
+function backClear() {
+  document.getElementById("floatingInput").value = document
+    .getElementById("floatingInput")
+    .value.slice(0, -1);
+}
 
 function clearInput() {
   document.getElementById("floatingInput").value = "";
@@ -34,7 +55,6 @@ function evaluate(expression) {
   let exp = expression.split("");
 
   let values = [];
-
   let ops = [];
 
   for (let i = 0; i < exp.length; i++) {
@@ -42,10 +62,14 @@ function evaluate(expression) {
       continue;
     }
 
-    if (exp[i] >= "0" && exp[i] <= "9") {
+    if ((exp[i] >= "0" && exp[i] <= "9") || exp[i] == ".") {
+      // Allowing decimal point
       let num = "";
 
-      while (i < exp.length && exp[i] >= "0" && exp[i] <= "9") {
+      while (
+        i < exp.length &&
+        ((exp[i] >= "0" && exp[i] <= "9") || exp[i] == ".") // Allowing decimal point
+      ) {
         num = num + exp[i++];
       }
       values.push(parseFloat(num, 10));
@@ -71,6 +95,14 @@ function evaluate(expression) {
 
   return values.pop();
 }
+
+// // Helper function to check operator precedence
+// function hasPrecedence(op1, op2) {
+//   if (op2 == "(" || op2 == ")") return false;
+//   if ((op1 == "*" || op1 == "/") && (op2 == "+" || op2 == "-")) return false;
+//   return true;
+// }
+
 
 // function to check precedence of operators
 function hasPrecedence(op1, op2) {
